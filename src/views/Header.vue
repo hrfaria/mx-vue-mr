@@ -163,7 +163,7 @@ export default {
         initials += this.profile.lastname.charAt(0).toUpperCase();
       }
 
-      if (!initials) {
+      if (!initials && this.profile.loginID) {
         initials = this.profile.loginID.charAt(0).toUpperCase();
       }
 
