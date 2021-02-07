@@ -106,20 +106,6 @@ export default {
                 }
             });
         },
-        // Use the method below for authenticating with JSESSIONID cookies.
-        /* async login(username, password) {
-            return axios({
-                method: "post",
-                url: "/maximo/oslc/login",
-                headers: {
-                    "maxauth": btoa(username + ":" + password)
-                },
-                params: {
-                    lean: 1
-                },
-                data: {}
-            });
-        }, */
         /**
          * Generate an API key with the passed username/password.
          * 
