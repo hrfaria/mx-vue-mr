@@ -23,7 +23,7 @@ import { mapGetters } from "vuex";
 export default {
   name: "Reservation",
   props: {
-    invuseid: Number
+    invuseid: String
   },
   computed: {
     // Vuex getter mappings.

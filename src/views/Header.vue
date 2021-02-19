@@ -191,10 +191,6 @@ export default {
         if (route.meta.breadCrumb) {
           let path = route.path;
 
-          Object.entries(params).forEach(function ([key, value]) {
-            path = path.replace(":" + key, value);
-          });
-
           breadcrumbs.push({
             to: path,
             text: route.meta.breadCrumb,

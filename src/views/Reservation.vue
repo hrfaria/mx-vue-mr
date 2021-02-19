@@ -15,7 +15,7 @@ import Reservation from "@/components/Reservation.vue";
 export default {
   name: "ReservationView",
   props: {
-    invuseid: Number
+    invuseid: String
   },
   components: {
     Reservation
