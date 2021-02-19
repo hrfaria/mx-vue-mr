@@ -1,9 +1,9 @@
 # mx-vue-mr
 
-## Maximo configuration
+### Maximo configuration
 Follow the steps described [here](https://github.com/hrfaria/mx-vue-mr/blob/main/maximo_config.md) to make sure Maximo is configured before you launch the Vue app. 
 
-## Project setup
+### Project setup
 ```
 npm install
 ```
