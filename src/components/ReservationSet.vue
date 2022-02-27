@@ -20,11 +20,13 @@
           data.item.invusenum
         }}</router-link>
       </template>
-      <template v-slot:cell(status)="data">
+      <!-- <template v-slot:cell(status)="data">
         <b-icon-box-arrow-in-right
           v-b-tooltip.hover
           :title="data.item.status"
-        />
+        /> -->
+      <template v-slot:cell(status)="data">
+        {{ data.item.status }}
       </template>
       <template v-slot:cell(statusdate)="data">
         {{ toDate(data.item.statusdate) }}

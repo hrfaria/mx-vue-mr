@@ -21,7 +21,7 @@
               <b-pagination
                 v-model="pagenum"
                 pills
-                size="sm"
+                size="md"
                 :total-rows="totalCount"
                 :per-page="perPage"
                 hide-goto-end-buttons
@@ -78,7 +78,7 @@
               <b-pagination
                 v-model="pagenum"
                 pills
-                size="sm"
+                size="md"
                 :total-rows="totalCount"
                 :per-page="perPage"
                 hide-goto-end-buttons

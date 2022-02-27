@@ -14,12 +14,18 @@
       :fields="fields"
       :items="cart.mrline"
     >
+      <template v-slot:cell(itemnum)="data">
+        <b-link v-b-tooltip.click :title="data.item.description">{{
+          data.item.itemnum
+        }}</b-link>
+      </template>
       <template v-slot:cell(qty)="data">
         <b-input-group>
           <b-input-group-prepend>
             <b-button
               variant="outline-info"
               v-on:click="data.item.qty -= data.item.qty > 1 ? 1 : 0"
+              class="d-none d-sm-block"
               >-</b-button
             >
           </b-input-group-prepend>
@@ -30,7 +36,10 @@
           ></b-form-input>
 
           <b-input-group-append>
-            <b-button variant="outline-info" v-on:click="data.item.qty += 1"
+            <b-button
+              variant="outline-info"
+              v-on:click="data.item.qty += 1"
+              class="d-none d-sm-block"
               >+</b-button
             >
           </b-input-group-append>
@@ -77,11 +86,11 @@ import { BIcon, BIconTrash } from "bootstrap-vue";
 export default {
   name: "Cart",
   props: {
-    mrid: Number
+    mrid: Number,
   },
   components: {
     BIcon,
-    BIconTrash
+    BIconTrash,
   },
   mounted() {
     this.cart = JSON.parse(JSON.stringify(this.getCart));
@@ -92,26 +101,26 @@ export default {
       fields: [
         {
           key: "itemnum",
-          label: "Item #"
+          label: "Item #",
         },
         {
-          key: "description"
+          key: "description",
         },
         {
           key: "qty",
-          label: "Quantity"
+          label: "Quantity",
         },
         {
           key: "trash",
-          label: ""
-        }
+          label: "",
+        },
       ],
-      cart: {}
+      cart: {},
     };
   },
   computed: {
     // Vuex getter mappings.
-    ...mapGetters(["getCart", "isBusy"])
+    ...mapGetters(["getCart", "isBusy"]),
   },
   methods: {
     // Vuex action mappings.
@@ -176,6 +185,6 @@ export default {
       });
     },
   },
-  mixins: [maximoRESTAPI]
+  mixins: [maximoRESTAPI],
 };
 </script>

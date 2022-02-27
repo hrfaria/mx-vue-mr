@@ -6,14 +6,14 @@
 <!-- ====================================================================== -->
 <template>
   <div>
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <h2>mx-vue</h2>
-    <p>A Vue Client for Maximo</p>
+    <img alt="Vue logo" src="../assets/restapi.svg" width="150" height="150"/>
+    <h2>mx-rest</h2>
+    <p>A Maximo RESTful Client</p>
 
     <!-- Call @/components/Login.vue to render the login form. -->
     <Login/>
 
-    <ul>
+    <!-- <ul>
       <li>
         <a
           href="https://www.ibm.com/ca-en/products/maximo"
@@ -30,7 +30,7 @@
           >Vue</a
         >
       </li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
@@ -47,7 +47,7 @@ export default {
 
 <style scoped>
 h2 {
-  margin: 40px 0 0;
+  margin: 20px 0 0;
 }
 ul {
   list-style-type: none;
@@ -63,5 +63,9 @@ a {
 
 div {
   text-align: center
+}
+
+img {
+  margin-top: 100px;
 }
 </style>
